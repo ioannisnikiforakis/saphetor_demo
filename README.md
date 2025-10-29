@@ -53,5 +53,5 @@ supervisord -c vcfapi.conf &
 
 4. Testing the App/ Examples of Use
 You obviously can use Postman or any method you like. The tests below are performed via httpie.
-(i.e. )
+(i.e. python -m pip install httpie)
 
