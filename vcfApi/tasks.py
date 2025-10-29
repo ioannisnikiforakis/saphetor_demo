@@ -42,9 +42,6 @@ def modify_file_rows(file_id):
                 deletedrows = Deleted.objects.all().order_by('line_id')
                 reader = vcfpy.Reader.from_path(vcf_file.fullpath)
                 copy_path = vcf_file.fullpath[:vcf_file.fullpath.index(".")]+"_copy.vcf"
-                
-                logger.info(reader.header)
-                
                 logger.info(copy_path)
                 writer = vcfpy.Writer.from_path(copy_path, reader.header)
                 # Get the dirty lines
